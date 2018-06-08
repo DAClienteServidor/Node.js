@@ -3,8 +3,9 @@ const express = require('express'),
       morgan = require('morgan'),
       mysql = require('mysql'),
       myConnection = require('express-myconnection');
+      cors= require('cors');
 
-const app = express();
+      const app = express();
 
 // importing routes
 const customerRoutes = require('./routes/customer');
@@ -13,6 +14,7 @@ const customerRoutes = require('./routes/customer');
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.use(cors({origin: 'http://localhost:4200'}));
 
 // middlewares
 app.use(morgan('dev'));

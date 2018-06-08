@@ -4,6 +4,7 @@
   "description": "this is a basic application crud that uses nodejs in the backend, mysql as database.",
   "main": "index.js",
   "dependencies": {
+    "cors": "^2.8.4",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "express-myconnection": "^1.0.4",
